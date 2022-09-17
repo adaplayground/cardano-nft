@@ -1,0 +1,8 @@
+build/
+node_modules/
+package-lock.json
+yarn.lock
+src/cli/meta-info
+src/cli/report
+src/cli/diy
+src/cli/firestore

@@ -1,0 +1,188 @@
+/**
+ *
+ * Header
+ *
+ */
+import * as React from 'react';
+import { useState } from 'react';
+import {
+  Button,
+  ButtonGroup,
+  Container,
+  Form,
+  Nav,
+  Navbar,
+  NavDropdown,
+  ToggleButton,
+} from 'react-bootstrap';
+import { LABELS } from 'lang/labels';
+import { Icon, InlineIcon } from '@iconify/react';
+import { NavLink, useHistory } from 'react-router-dom';
+import useSolanaCluster from 'metaplex/contexts/solanaClusterContext';
+import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
+import { WalletIcon } from '@solana/wallet-adapter-react-ui/lib/WalletIcon';
+import { useWallet } from '@solana/wallet-adapter-react';
+import { themeNames, themes } from 'styles/themes';
+import useTheme from 'contexts/themeContext';
+import { appTheme } from 'styles/appTheme';
+import { Helmet } from 'react-helmet';
+
+const solanaClusters = [
+  { name: 'Devnet', value: WalletAdapterNetwork.Devnet },
+  { name: 'Mainnet', value: WalletAdapterNetwork.Mainnet },
+];
+
+export function Header() {
+  let history = useHistory();
+
+  const { wallet, connected, disconnect } = useWallet();
+  const { solanaCluster, setSolanaCluster } = useSolanaCluster();
+  const { themeName, setThemeName } = useTheme();
+  const [radioValue, setRadioValue] =
+    useState<WalletAdapterNetwork>(solanaCluster);
+  const changeSolanaCluster = async e => {
+    setRadioValue(e.currentTarget.value);
+    setSolanaCluster(e.currentTarget.value);
+  };
+
+  const onChangeTheme = e => {
+    if (e.target.value !== 'themes') {
+      setThemeName(e.target.value);
+    } else {
+      setThemeName(themeName);
+    }
+  };
+
+  const [appThemeStyles, setAppThemeStyles] = React.useState(
+    appTheme(themes[themeName]),
+  );
+  React.useEffect(() => {
+    setAppThemeStyles(appTheme(themes[themeName]));
+  }, [themeName]);
+
+  // @ts-ignore
+  return (
+    <header className={'header navbar-sticky'}>
+      <Helmet>
+        <style>{appThemeStyles}</style>
+      </Helmet>
+      <Navbar expand="lg" className={`border-0 shadow-0 px-lg-5 `}>
+        <Container fluid={true} className={'mx-3  d-flex'}>
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            className="navbar-toggler-right text-hover-primary"
+            aria-label="Toggle navigation"
+          >
+            <Icon icon="mdi:menu" className="navbar-icon" />
+          </Navbar.Toggle>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className={'me-auto'}>
+              <NavLink to="/home" className={'nav-link'}>
+                <InlineIcon
+                  icon={'mdi-home'}
+                  className={'text-dark'}
+                  fontSize={24}
+                />
+              </NavLink>
+
+              <NavDropdown title="Playground" id="basic-nav-dropdown">
+                <NavLink to="/candy" className={'nav-link'}>
+                  Candy Machine
+                </NavLink>
+                <NavDropdown.Divider />
+                <NavLink to="/self" className={'nav-link'}>
+                  DIY With Meta
+                </NavLink>
+                <NavLink to="/diy" className={'nav-link'}>
+                  DIY With Image
+                </NavLink>
+              </NavDropdown>
+              <NavLink to="/gallery" className={'nav-link'}>
+                Gallery
+              </NavLink>
+              <NavLink to="/faq" className={'nav-link'}>
+                Faq
+              </NavLink>
+              {/*<NavLink to="/tutorial" className={'nav-link'}>*/}
+              {/*  Tutorial*/}
+              {/*</NavLink>*/}
+              {/*<NavLink to="/blog" className={'nav-link'}>*/}
+              {/*  Blog*/}
+              {/*</NavLink>*/}
+              <NavLink to="/contact" className={'nav-link'}>
+                Contact
+              </NavLink>
+              {/*<NavLink to="/about" className={'nav-link'}>*/}
+              {/*  About Me*/}
+              {/*</NavLink>*/}
+            </Nav>
+
+            <div style={{ flex: 1 }} />
+            <div>
+              <ButtonGroup className={'m-3'}>
+                {solanaClusters.map((radio, idx) => (
+                  <ToggleButton
+                    key={idx}
+                    id={`radio-${idx}`}
+                    type="radio"
+                    size={'sm'}
+                    variant={idx % 2 ? 'outline-success' : 'outline-info'}
+                    name="radio"
+                    disabled={connected}
+                    value={radio.value}
+                    checked={radioValue === radio.value}
+                    onChange={changeSolanaCluster}
+                  >
+                    {radio.name}
+                  </ToggleButton>
+                ))}
+              </ButtonGroup>
+            </div>
+            <Button
+              variant="outline-info"
+              className={'border-0'}
+              size={'sm'}
+              onClick={() => history.push('/wallet')}
+            >
+              <div className={'text-center d-flex flex-row align-items-center'}>
+                <Icon
+                  className="navbar-icon text-primary text-sm"
+                  icon="mdi:wallet"
+                  height={24}
+                />
+                <div>{LABELS.WALLET}</div>
+              </div>
+            </Button>
+            <div className={'ml-2 d-flex '}>
+              <WalletIcon wallet={wallet} />
+              <div className={'text-danger'} title={'Click to disconnect'}>
+                {wallet ? (
+                  <InlineIcon
+                    icon={'mdi:close-circle'}
+                    onClick={disconnect}
+                    style={{ cursor: 'pointer' }}
+                  />
+                ) : null}
+              </div>
+            </div>
+            {/*<div style={{ width: '150px' }}>*/}
+            {/*  <Form.Select*/}
+            {/*    aria-label="Choose theme"*/}
+            {/*    onChange={onChangeTheme}*/}
+            {/*    defaultValue={themeName}*/}
+            {/*  >*/}
+            {/*    <option value="themes">Themes</option>*/}
+            {/*    <option value="default">Default</option>*/}
+            {/*    {themeNames.map(r => (*/}
+            {/*      <option key={r} value={r.toLowerCase()}>*/}
+            {/*        {r}*/}
+            {/*      </option>*/}
+            {/*    ))}*/}
+            {/*  </Form.Select>*/}
+            {/*</div>*/}
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </header>
+  );
+}
