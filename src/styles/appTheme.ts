@@ -6,7 +6,7 @@ export const appTheme = (theme: themeType) => `
 /*
  * Cartzilla | Bootstrap E-Commerce Template
  * Copyright 2021 Createx Studio
- * Copyright 2021 Solana NFT
+ * Copyright 2022 Cardano NFT
  * Theme styles
  */
 /*!

@@ -85,36 +85,11 @@ export function Header() {
                 />
               </NavLink>
 
-              <NavDropdown title="Playground" id="basic-nav-dropdown">
-                <NavLink to="/candy" className={'nav-link'}>
-                  Candy Machine
-                </NavLink>
-                <NavDropdown.Divider />
-                <NavLink to="/self" className={'nav-link'}>
-                  DIY With Meta
-                </NavLink>
-                <NavLink to="/diy" className={'nav-link'}>
-                  DIY With Image
-                </NavLink>
-              </NavDropdown>
-              <NavLink to="/gallery" className={'nav-link'}>
-                Gallery
-              </NavLink>
-              <NavLink to="/faq" className={'nav-link'}>
-                Faq
-              </NavLink>
-              {/*<NavLink to="/tutorial" className={'nav-link'}>*/}
-              {/*  Tutorial*/}
-              {/*</NavLink>*/}
-              {/*<NavLink to="/blog" className={'nav-link'}>*/}
-              {/*  Blog*/}
-              {/*</NavLink>*/}
+
               <NavLink to="/contact" className={'nav-link'}>
                 Contact
               </NavLink>
-              {/*<NavLink to="/about" className={'nav-link'}>*/}
-              {/*  About Me*/}
-              {/*</NavLink>*/}
+
             </Nav>
 
             <div style={{ flex: 1 }} />

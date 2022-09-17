@@ -7,7 +7,7 @@ export const LABELS = {
   MENU_HOME: 'Home',
   MENU_FAUCET: 'Faucet',
   WALLET: 'Wallet',
-  APP_TITLE: 'Solana NFT Playground',
+  APP_TITLE: 'Cardano NFT Playground',
   CONNECT_BUTTON: 'Connect',
   WALLET_TOOLTIP: 'Wallet public key',
   WALLET_BALANCE: 'Wallet balance',

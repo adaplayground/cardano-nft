@@ -24,7 +24,7 @@ export function HomeView() {
       {/*</div>*/}
 
       <div className={'text-center display-1 mx-auto '}>
-        Solana NFT Playground
+        Cardano NFT Playground
       </div>
     </div>
   );

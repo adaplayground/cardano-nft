@@ -1,5 +1,5 @@
 {
-  "name": "solana-nft",
+  "name": "cardano-nft",
   "version": "0.1.0",
   "dependencies": {
     "@babel/preset-typescript": "^7.12.13",

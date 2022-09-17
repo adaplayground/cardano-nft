@@ -1,6 +1,6 @@
 {
-  "name": "Solana NFT",
-  "short_name": "Solana NFT",
+  "name": "Cardano NFT",
+  "short_name": "Cardano NFT",
   "display": "standalone",
   "start_url": "./",
   "theme_color": "#002140",
