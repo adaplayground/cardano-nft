@@ -7,7 +7,7 @@ export const LABELS = {
   MENU_HOME: 'Home',
   MENU_FAUCET: 'Faucet',
   WALLET: 'Wallet',
-  APP_TITLE: 'Cardano NFT Playground',
+  APP_TITLE: 'Cardano Red Alert NFT',
   CONNECT_BUTTON: 'Connect',
   WALLET_TOOLTIP: 'Wallet public key',
   WALLET_BALANCE: 'Wallet balance',

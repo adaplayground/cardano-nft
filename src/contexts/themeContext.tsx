@@ -7,7 +7,7 @@ import {
 } from 'store/nftFireStore';
 
 const themeIndex = randomIntFromInterval(0, themeNames.length);
-const randomThemeName: string = 'sketchy'; //themeNames[themeIndex % themeNames.length];
+const randomThemeName: string = 'cyborg'; //themeNames[themeIndex % themeNames.length];
 
 const themeContext = createContext({
   themeName: randomThemeName.toLowerCase(),

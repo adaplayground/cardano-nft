@@ -16,7 +16,7 @@ export const Footer = memo((props: Props) => {
           <Row className="align-items-center text-sm text-gray-500">
             <Col lg="4" className="text-center text-lg-left">
               <p className="mb-lg-0">
-                &copy; {new Date().getFullYear()} Cardano NFT Playground. All
+                &copy; {new Date().getFullYear()} Cardano Red Alert NFT. All
                 rights reserved.
               </p>
             </Col>
