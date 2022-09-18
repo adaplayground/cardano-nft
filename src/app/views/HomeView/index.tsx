@@ -27,11 +27,9 @@ export function HomeView() {
         Cardano
       </div>
       <div className={'text-center display-2 mx-auto text-danger pb-2'}>
-         Red Alert
+        Red Alert
       </div>
-      <div className={'text-center display-1 mx-auto '}>
-        NFT Playground
-      </div>
+      <div className={'text-center display-1 mx-auto '}>NFT Playground</div>
     </div>
   );
 }

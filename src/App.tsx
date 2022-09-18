@@ -4,7 +4,6 @@ import { getAnalytics } from 'firebase/analytics';
 import { enableCache } from '@iconify/react';
 import { firebaseApp } from 'store/nftFireStore';
 
-
 const analytics = getAnalytics(firebaseApp);
 
 function App() {

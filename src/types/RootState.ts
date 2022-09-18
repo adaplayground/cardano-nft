@@ -5,9 +5,6 @@
 */
 import { RouterState } from 'store/reducers';
 
-
-
 export interface RootState {
   router: RouterState;
-
 }

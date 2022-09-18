@@ -23,14 +23,10 @@ import useTheme from 'contexts/themeContext';
 import { appTheme } from 'styles/appTheme';
 import { Helmet } from 'react-helmet';
 
-
-
 export function Header() {
   let history = useHistory();
 
-
   const { themeName, setThemeName } = useTheme();
-
 
   const onChangeTheme = e => {
     if (e.target.value !== 'themes') {
@@ -72,11 +68,9 @@ export function Header() {
                 />
               </NavLink>
 
-
               <NavLink to="/contact" className={'nav-link'}>
                 Contact
               </NavLink>
-
             </Nav>
 
             <div style={{ flex: 1 }} />

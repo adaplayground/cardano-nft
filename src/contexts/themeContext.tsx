@@ -1,10 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 
-
-import {
-  getApplicationConfInfo,
-} from 'store/nftFireStore';
-
+import { getApplicationConfInfo } from 'store/nftFireStore';
 
 const randomThemeName: string = 'cyborg'; //themeNames[themeIndex % themeNames.length];
 

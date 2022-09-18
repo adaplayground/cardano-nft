@@ -10,7 +10,6 @@ import { Button } from 'react-bootstrap';
 
 import { InlineIcon } from '@iconify/react';
 
-
 interface Props {
   meta: MetaDataType;
   buyProduct: (meta: MetaDataType) => void;

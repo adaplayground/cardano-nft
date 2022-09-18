@@ -12,12 +12,8 @@ import {
   where,
 } from 'firebase/firestore';
 import { firebaseConfig } from 'conf/firebase';
-import {
-  ApplicationConfType,
-
-} from 'types';
-import { dateString } from "utils/helpers";
-
+import { ApplicationConfType } from 'types';
+import { dateString } from 'utils/helpers';
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
@@ -98,8 +94,6 @@ const getAllRecords = async (solanaCluster: string, collectionName: string) => {
   return records;
 };
 
-
-
 const getApplicationConfInfo = async () => {
   const sfDocRef = doc(fireStore, applicationConfCollection, 'AppConf');
   let sfDoc = await getDoc(sfDocRef);
@@ -113,7 +107,6 @@ const setApplicationConfInfo = async (summary: ApplicationConfType) => {
   const sfDocRef = doc(fireStore, applicationConfCollection, 'AppConf');
   await setDoc(sfDocRef, summary);
 };
-
 
 const restoreCollection = async (
   documentId: string,
@@ -148,7 +141,6 @@ const saveEmail = async (
   }
 };
 
-
 export {
   firebaseApp,
   fireStore,
@@ -160,10 +152,7 @@ export {
   saveEmail,
   clearSummaryLock,
   setSummaryLock,
-
   restoreCollection,
-
   getApplicationConfInfo,
   setApplicationConfInfo,
-
 };
