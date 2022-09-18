@@ -1,12 +1,11 @@
 import React, { createContext, useContext, useState } from 'react';
-import { randomIntFromInterval } from 'metaplex/utils/helpers';
-import { themeNames } from 'styles/themes';
+
+
 import {
   getApplicationConfInfo,
-  getImageMetaSummaryInfo,
 } from 'store/nftFireStore';
 
-const themeIndex = randomIntFromInterval(0, themeNames.length);
+
 const randomThemeName: string = 'cyborg'; //themeNames[themeIndex % themeNames.length];
 
 const themeContext = createContext({

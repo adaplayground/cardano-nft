@@ -2,7 +2,6 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import AOS from 'aos';
 import objectFitImages from 'object-fit-images';
-import '@solana/wallet-adapter-react-ui/styles.css';
 import 'aos/dist/aos.css';
 import 'styles/fonts/stylesheet.scss';
 import 'styles/index.scss';

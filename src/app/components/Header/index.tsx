@@ -18,32 +18,19 @@ import {
 import { LABELS } from 'lang/labels';
 import { Icon, InlineIcon } from '@iconify/react';
 import { NavLink, useHistory } from 'react-router-dom';
-import useSolanaCluster from 'metaplex/contexts/solanaClusterContext';
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
-import { WalletIcon } from '@solana/wallet-adapter-react-ui/lib/WalletIcon';
-import { useWallet } from '@solana/wallet-adapter-react';
 import { themeNames, themes } from 'styles/themes';
 import useTheme from 'contexts/themeContext';
 import { appTheme } from 'styles/appTheme';
 import { Helmet } from 'react-helmet';
 
-const solanaClusters = [
-  { name: 'Devnet', value: WalletAdapterNetwork.Devnet },
-  { name: 'Mainnet', value: WalletAdapterNetwork.Mainnet },
-];
+
 
 export function Header() {
   let history = useHistory();
 
-  const { wallet, connected, disconnect } = useWallet();
-  const { solanaCluster, setSolanaCluster } = useSolanaCluster();
+
   const { themeName, setThemeName } = useTheme();
-  const [radioValue, setRadioValue] =
-    useState<WalletAdapterNetwork>(solanaCluster);
-  const changeSolanaCluster = async e => {
-    setRadioValue(e.currentTarget.value);
-    setSolanaCluster(e.currentTarget.value);
-  };
+
 
   const onChangeTheme = e => {
     if (e.target.value !== 'themes') {
@@ -94,24 +81,24 @@ export function Header() {
 
             <div style={{ flex: 1 }} />
             <div>
-              <ButtonGroup className={'m-3'}>
-                {solanaClusters.map((radio, idx) => (
-                  <ToggleButton
-                    key={idx}
-                    id={`radio-${idx}`}
-                    type="radio"
-                    size={'sm'}
-                    variant={idx % 2 ? 'outline-success' : 'outline-info'}
-                    name="radio"
-                    disabled={connected}
-                    value={radio.value}
-                    checked={radioValue === radio.value}
-                    onChange={changeSolanaCluster}
-                  >
-                    {radio.name}
-                  </ToggleButton>
-                ))}
-              </ButtonGroup>
+              {/*<ButtonGroup className={'m-3'}>*/}
+              {/*  {solanaClusters.map((radio, idx) => (*/}
+              {/*    <ToggleButton*/}
+              {/*      key={idx}*/}
+              {/*      id={`radio-${idx}`}*/}
+              {/*      type="radio"*/}
+              {/*      size={'sm'}*/}
+              {/*      variant={idx % 2 ? 'outline-success' : 'outline-info'}*/}
+              {/*      name="radio"*/}
+              {/*      disabled={connected}*/}
+              {/*      value={radio.value}*/}
+              {/*      checked={radioValue === radio.value}*/}
+              {/*      onChange={changeSolanaCluster}*/}
+              {/*    >*/}
+              {/*      {radio.name}*/}
+              {/*    </ToggleButton>*/}
+              {/*  ))}*/}
+              {/*</ButtonGroup>*/}
             </div>
             <Button
               variant="outline-info"
@@ -128,18 +115,18 @@ export function Header() {
                 <div>{LABELS.WALLET}</div>
               </div>
             </Button>
-            <div className={'ml-2 d-flex '}>
-              <WalletIcon wallet={wallet} />
-              <div className={'text-danger'} title={'Click to disconnect'}>
-                {wallet ? (
-                  <InlineIcon
-                    icon={'mdi:close-circle'}
-                    onClick={disconnect}
-                    style={{ cursor: 'pointer' }}
-                  />
-                ) : null}
-              </div>
-            </div>
+            {/*<div className={'ml-2 d-flex '}>*/}
+            {/*  <WalletIcon wallet={wallet} />*/}
+            {/*  <div className={'text-danger'} title={'Click to disconnect'}>*/}
+            {/*    {wallet ? (*/}
+            {/*      <InlineIcon*/}
+            {/*        icon={'mdi:close-circle'}*/}
+            {/*        onClick={disconnect}*/}
+            {/*        style={{ cursor: 'pointer' }}*/}
+            {/*      />*/}
+            {/*    ) : null}*/}
+            {/*  </div>*/}
+            {/*</div>*/}
             {/*<div style={{ width: '150px' }}>*/}
             {/*  <Form.Select*/}
             {/*    aria-label="Choose theme"*/}

@@ -9,7 +9,7 @@ import { Img } from 'app/components/Img';
 import { Button } from 'react-bootstrap';
 
 import { InlineIcon } from '@iconify/react';
-import { useSolPrice } from 'metaplex/contexts/coingecko';
+
 
 interface Props {
   meta: MetaDataType;
@@ -20,7 +20,7 @@ interface Props {
 
 export const ProductCard = memo(
   ({ meta, buyProduct, price, available }: Props) => {
-    const solPrice = useSolPrice();
+    const solPrice = 0.1;
     const total = parseFloat((solPrice * price).toString()).toFixed(2);
 
     const onBuyProduct = () => {
