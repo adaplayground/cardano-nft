@@ -7,5 +7,3 @@ export const firebaseConfig = {
   appId: '1:381369134386:web:1a89214cf9533bf820bb2b',
   measurementId: 'G-K32T8GJP18',
 };
-export const notificationEmailAddress = 'sales@solana-nft.io';
-export const appCategory = 'Solana';
