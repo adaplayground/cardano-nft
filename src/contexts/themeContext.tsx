@@ -6,7 +6,8 @@ const randomThemeName: string = 'cyborg'; //themeNames[themeIndex % themeNames.l
 
 const themeContext = createContext({
   themeName: randomThemeName.toLowerCase(),
-  setThemeName: (name: string) => {},
+  setThemeName: (name: string) => {
+  },
 });
 
 function useTheme() {

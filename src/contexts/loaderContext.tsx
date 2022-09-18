@@ -1,7 +1,9 @@
 import React, { createContext, useContext, useState } from 'react';
+
 const LoaderContext = createContext({
   loading: false,
-  setLoading: (flag: boolean) => {},
+  setLoading: (flag: boolean) => {
+  },
 });
 
 function useLoader() {

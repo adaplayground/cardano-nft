@@ -5,7 +5,7 @@ const CreateReactAppEntryPoint = dynamic(() => import('../App'), {
 });
 
 function App() {
-  return <CreateReactAppEntryPoint />;
+  return <CreateReactAppEntryPoint/>;
 }
 
 export default App;

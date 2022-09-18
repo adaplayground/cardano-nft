@@ -52,7 +52,7 @@ export const ConfettiProvider = ({ children = null as any }) => {
 
   return (
     <ConfettiContext.Provider value={{ dropConfetti }}>
-      <canvas ref={canvasRef as any} style={canvasStyle} />
+      <canvas ref={canvasRef as any} style={canvasStyle}/>
       {children}
     </ConfettiContext.Provider>
   );

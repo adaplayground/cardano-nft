@@ -45,7 +45,7 @@ export function CollectibleCard({ meta, viewImage }: Props) {
         <h5 className="text-base mb-1">
           <div className="text-dark">
             {meta.authenticated ? (
-              <InlineIcon icon={'mdi:certificate'} color={'orange'} />
+              <InlineIcon icon={'mdi:certificate'} color={'orange'}/>
             ) : null}
             {meta.name}
           </div>

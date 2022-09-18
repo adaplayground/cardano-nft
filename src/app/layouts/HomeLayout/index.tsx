@@ -3,7 +3,6 @@ import { Header } from 'app/components/Header';
 import { NextNProgress } from 'app/components/NextNProgress';
 import { Switch, useLocation } from 'react-router-dom';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
-import { Footer } from 'app/components/Footer';
 
 function HomeLayout(props: Props) {
   const location = useLocation();
@@ -18,8 +17,8 @@ function HomeLayout(props: Props) {
         backgroundSize: 'cover',
       }}
     >
-      <Header />
-      <NextNProgress color="#bcac76" options={{ showSpinner: false }} />
+      <Header/>
+      <NextNProgress color="#bcac76" options={{ showSpinner: false }}/>
       <main role="main" className="page-wrapper">
         <style jsx>{`
           .fade-enter {

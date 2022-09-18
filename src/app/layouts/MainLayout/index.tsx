@@ -4,13 +4,14 @@ import { NextNProgress } from 'app/components/NextNProgress';
 import { Switch, useLocation } from 'react-router-dom';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import { Footer } from 'app/components/Footer';
+
 function MainLayout(props: Props) {
   const location = useLocation();
   const nodeRef = React.useRef(null);
   return (
     <>
-      <Header />
-      <NextNProgress color="#bcac76" options={{ showSpinner: false }} />
+      <Header/>
+      <NextNProgress color="#bcac76" options={{ showSpinner: false }}/>
       <main role="main" className="page-wrapper">
         <style jsx>{`
           .fade-enter {
@@ -43,7 +44,7 @@ function MainLayout(props: Props) {
           </CSSTransition>
         </SwitchTransition>
       </main>
-      <Footer />
+      <Footer/>
     </>
   );
 }

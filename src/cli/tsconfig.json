@@ -20,9 +20,18 @@
     "preserveConstEnums": true,
     "suppressImplicitAnyIndexErrors": true,
     "resolveJsonModule": true,
-    "lib": ["dom", "es2019"],
+    "lib": [
+      "dom",
+      "es2019"
+    ],
     "baseUrl": "../"
   },
-  "exclude": ["node_modules", "typings/browser", "typings/browser.d.ts"],
-  "include": ["../"]
+  "exclude": [
+    "node_modules",
+    "typings/browser",
+    "typings/browser.d.ts"
+  ],
+  "include": [
+    "../"
+  ]
 }

@@ -1,10 +1,4 @@
-import Document, {
-  DocumentContext,
-  Head,
-  Html,
-  Main,
-  NextScript,
-} from 'next/document';
+import Document, { DocumentContext, Head, Html, Main, NextScript, } from 'next/document';
 import { LABELS } from 'lang/labels';
 
 export default class MetaplexDocument extends Document {
@@ -17,7 +11,7 @@ export default class MetaplexDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta charSet="utf-8" />
+          <meta charSet="utf-8"/>
 
           <link
             rel="icon"
@@ -37,13 +31,13 @@ export default class MetaplexDocument extends Document {
             sizes="16x16"
             href="/favicon-16x16.png"
           />
-          <meta name="theme-color" content="#000000" />
-          <meta name="description" content={LABELS.APP_TITLE} />
-          <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content="#000000"/>
+          <meta name="description" content={LABELS.APP_TITLE}/>
+          <link rel="manifest" href="/manifest.json"/>
         </Head>
         <body className="handheld-toolbar-enabled">
-          <Main />
-          <NextScript />
+        <Main/>
+        <NextScript/>
         </body>
       </Html>
     );

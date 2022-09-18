@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from 'react';
+import React, { FC } from 'react';
 
 import reduxStore from 'store/configureStore';
 import { Provider as ReduxProvider } from 'react-redux';

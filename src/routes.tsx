@@ -16,7 +16,7 @@ export function Routes() {
         path="/contact"
         component={() => (
           <MainLayout>
-            <ContactUsView />
+            <ContactUsView/>
           </MainLayout>
         )}
       />
@@ -25,7 +25,7 @@ export function Routes() {
         path="/home"
         component={() => (
           <HomeLayout>
-            <HomeView />
+            <HomeView/>
           </HomeLayout>
         )}
       />
@@ -35,7 +35,7 @@ export function Routes() {
         path="/"
         component={() => (
           <HomeLayout>
-            <HomeView />
+            <HomeView/>
           </HomeLayout>
         )}
       />

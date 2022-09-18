@@ -8,7 +8,8 @@ import { Button, Col, Container, Form, Row, Toast } from 'react-bootstrap';
 import { InlineIcon } from '@iconify/react';
 import { saveEmail } from 'store/nftFireStore';
 
-interface Props {}
+interface Props {
+}
 
 export const ContactUsView = memo((props: Props) => {
   const [firstName, setFirstName] = React.useState('');

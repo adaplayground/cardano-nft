@@ -4,21 +4,11 @@
  *
  */
 import * as React from 'react';
-import { useState } from 'react';
-import {
-  Button,
-  ButtonGroup,
-  Container,
-  Form,
-  Nav,
-  Navbar,
-  NavDropdown,
-  ToggleButton,
-} from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, } from 'react-bootstrap';
 import { LABELS } from 'lang/labels';
 import { Icon, InlineIcon } from '@iconify/react';
 import { NavLink, useHistory } from 'react-router-dom';
-import { themeNames, themes } from 'styles/themes';
+import { themes } from 'styles/themes';
 import useTheme from 'contexts/themeContext';
 import { appTheme } from 'styles/appTheme';
 import { Helmet } from 'react-helmet';
@@ -56,7 +46,7 @@ export function Header() {
             className="navbar-toggler-right text-hover-primary"
             aria-label="Toggle navigation"
           >
-            <Icon icon="mdi:menu" className="navbar-icon" />
+            <Icon icon="mdi:menu" className="navbar-icon"/>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className={'me-auto'}>
@@ -73,7 +63,7 @@ export function Header() {
               </NavLink>
             </Nav>
 
-            <div style={{ flex: 1 }} />
+            <div style={{ flex: 1 }}/>
             <div>
               {/*<ButtonGroup className={'m-3'}>*/}
               {/*  {solanaClusters.map((radio, idx) => (*/}

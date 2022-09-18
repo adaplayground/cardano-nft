@@ -18,14 +18,14 @@ interface Props {
 }
 
 export function MessageBox({
-  title,
-  message,
-  icon,
-  onOk,
-  iconColor,
-  modalShow,
-  onCancel,
-}: Props) {
+                             title,
+                             message,
+                             icon,
+                             onOk,
+                             iconColor,
+                             modalShow,
+                             onCancel,
+                           }: Props) {
   return (
     <Modal
       show={modalShow}
@@ -37,7 +37,7 @@ export function MessageBox({
       <Modal.Header>
         <Modal.Title id="contained-modal-title-vcenter">
           <div className={'d-flex align-items-center'}>
-            <InlineIcon className="h2 mr-2" icon={icon} color={iconColor} />
+            <InlineIcon className="h2 mr-2" icon={icon} color={iconColor}/>
             <div className={'px-2'}>{title}</div>
           </div>
         </Modal.Title>

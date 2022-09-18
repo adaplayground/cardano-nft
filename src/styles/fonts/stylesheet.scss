@@ -5,7 +5,7 @@
  * Fully installable fonts can be purchased at http://www.fontspring.com
  *
  * The fonts included in this stylesheet are subject to the End User License you purchased
- * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * from Fontspring. The fonts are protected under domestic and international trademark and
  * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
  * distributing this font software.
  *
@@ -25,7 +25,7 @@
 @font-face {
   font-family: 'vremenagrotesk';
   src: url('vremenagroteskbook-webfont.woff2') format('woff2'),
-    url('vremenagroteskbook-webfont.woff') format('woff');
+  url('vremenagroteskbook-webfont.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
@@ -33,14 +33,15 @@
 @font-face {
   font-family: 'vremenagrotesk';
   src: url('vremenagrotesk-webfont.woff2') format('woff2'),
-    url('vremenagrotesk-webfont.woff') format('woff');
+  url('vremenagrotesk-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'vremenagrotesk';
   src: url('vremenagroteskbold-webfont.woff2') format('woff2'),
-    url('vremenagroteskbold-webfont.woff') format('woff');
+  url('vremenagroteskbold-webfont.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
